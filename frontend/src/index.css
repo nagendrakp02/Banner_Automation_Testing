@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base { * { box-sizing: border-box; } body { @apply font-sans text-sm text-gray-900; } }
+
+@layer components {
+  .btn         { @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700 active:scale-95; }
+  .btn-secondary { @apply btn bg-white text-gray-700 border border-gray-200 hover:bg-gray-50; }
+  .btn-danger  { @apply btn bg-red-600 text-white hover:bg-red-700; }
+  .card        { @apply bg-white rounded-xl border border-gray-100 shadow-sm; }
+  .badge       { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium; }
+  .badge-pass  { @apply badge bg-green-50 text-green-700; }
+  .badge-fail  { @apply badge bg-red-50 text-red-700; }
+  .badge-error { @apply badge bg-orange-50 text-orange-700; }
+  .badge-pending { @apply badge bg-gray-100 text-gray-500; }
+  .badge-running { @apply badge bg-brand-50 text-brand-700; }
+  .badge-not_applicable { @apply badge bg-gray-100 text-gray-400; }
+  .input { @apply w-full px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent placeholder:text-gray-400; }
+  .log-terminal { @apply font-mono text-xs bg-gray-950 text-gray-100 rounded-xl p-4 overflow-y-auto; min-height:180px; max-height:380px; }
+  .log-info    { @apply text-gray-300; }
+  .log-agent   { @apply text-brand-400; }
+  .log-warning { @apply text-yellow-400; }
+  .log-error   { @apply text-red-400; }
+  .log-result  { @apply text-green-400 font-semibold; }
+}
+
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
