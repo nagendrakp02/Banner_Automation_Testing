@@ -64,7 +64,7 @@ yarn-error.log*
 # ----------------------
 playwright-report/
 test-results/
-backend\core\config.py
+
 # ----------------------
 # Misc
 # ----------------------
